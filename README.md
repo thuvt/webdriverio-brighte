@@ -30,5 +30,5 @@
 ```npm run report```
 
 ## Assumption
-No formula to calculate the preapproval eligible amount and maximum repayment amount. Assume that the expected amounts calculated from the excel file
+No formula to calculate the preapproval eligible amount and maximum repayment amount. Assume that the expected amounts calculated from the data.js file
 
