@@ -1,0 +1,6 @@
+/test/*
+/report/*
+/node_modules/*
+wdio.*.js
+
+
