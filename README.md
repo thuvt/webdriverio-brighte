@@ -14,10 +14,11 @@
 
 **Install**
 
-(optional) Create your own configurations.
-- Rename the `sample.env` and rename to `.env` and change required variables
-
 ```npm install```
+
+**Clean up your test results before execution**
+
+`npm run clean`
 
 **Run Tests**
 
@@ -28,30 +29,6 @@
 
 ```npm run report```
 
-**Microsoft Teams Mini Report**
+## Assumption
+No formula to calculate the preapproval eligible amount and maximum repayment amount. Assume that the expected amounts calculated from the excel file
 
-```
-# For Unix
-export HOOK_URL=<microsoft_teams_webhook_url>
-# For Windows Powershell
-$env:HOOK_URL = '<microsoft_teams_webhook_url>'
-
-npm run report.teams
-```
-
-## Tips & Tricks
-## Running in SauceLabs
-Add a valid `SAUCE_USERNAME` and `SAUCE_ACCESS_KEY` to your environment variables to enable that integration.
-([Settting up Sauce](http://webdriver.io/guide/usage/cloudservices.html#Sauce-Labs))
-
-`npm run test.sauce`
-
-### Debug Command Line Flag to adjust timeout
-
-By setting the 'DEBUG' environment variable to true, the test timeout with be essentially removed, 
-allowing you to run without your tests timing out. 
-
-`DEBUG=true npm test`
-### Clean up your test results before execution
-
-`npm run clean`
