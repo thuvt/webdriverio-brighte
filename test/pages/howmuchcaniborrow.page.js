@@ -7,7 +7,7 @@ class HowMuchCanIBorrowPage extends Page {
   }
 
   get maritalStatus() {
-    return $("//form[@id='pre-approval-how-much-can-i-borrow-form']/div[2]//span[contains(text(),'" + data.marital_status + "')]");
+    return $("//form[@id='pre-approval-how-much-can-i-borrow-form']/div[2]//div[@class='select-wrapper']//span[contains(text(),'" + data.marital_status + "')]");
   }
 
   get dependantsDdl() {
