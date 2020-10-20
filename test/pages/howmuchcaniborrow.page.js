@@ -106,10 +106,12 @@ class HowMuchCanIBorrowPage extends Page {
   addHouseHoldDetails() {
 
     this.maritalStatusDdl.click();
+    this.maritalStatus.moveTo();
     this.maritalStatus.click();
 
     this.dependantsDdl.click();
-    this.dependants.doubleClick();
+    this.dependants.moveTo();
+    this.dependants.click();
 
     this.baseNetIncomeAmount.setValue(data.base_net_income_amount);
     this.baseNetIncomeFrequencyDdl.click();
