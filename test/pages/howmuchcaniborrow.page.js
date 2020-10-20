@@ -15,7 +15,7 @@ class HowMuchCanIBorrowPage extends Page {
   }
 
   get dependants() {
-    return $("//form[@id='pre-approval-how-much-can-i-borrow-form']/div[3]//span[contains(text(),'" + data.dependantsNum + "')]");
+    return $("//form[@id='pre-approval-how-much-can-i-borrow-form']/div[3]//div[@class='select-wrapper']//span[contains(text(),'" + data.dependantsNum + "')]");
   }
 
   get baseNetIncomeAmount() {
