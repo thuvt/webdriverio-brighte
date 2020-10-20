@@ -5,11 +5,32 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "name": "run select spec",
+      "type": "node",
+      "request": "launch",
+      "args": ["wdio.conf.js", "--spec", "${file}"],
+      "cwd": "${workspaceFolder}",
+      "autoAttachChildProcesses": true,
+      "program": "${workspaceRoot}/node_modules/@wdio/cli/bin/wdio.js",
+      "console": "integratedTerminal"
+  },
+  {
+    "name": "all - chrome",
+    "type": "node",
+    "request": "launch",
+    "args": ["wdio.conf.js"],
+    "cwd": "${workspaceFolder}",
+    "autoAttachChildProcesses": true,
+    "program": "${workspaceRoot}/node_modules/@wdio/cli/bin/wdio.js",
+    "console": "integratedTerminal"
+  }
+    {
       "type": "chrome",
       "request": "launch",
       "name": "Launch Chrome against localhost",
       "url": "http://localhost:8080",
       "webRoot": "${workspaceFolder}"
     }
+
   ]
 }
