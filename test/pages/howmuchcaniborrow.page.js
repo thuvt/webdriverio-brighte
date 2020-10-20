@@ -107,10 +107,12 @@ class HowMuchCanIBorrowPage extends Page {
 
     this.maritalStatusDdl.click();
     this.maritalStatus.moveTo();
+    this.maritalStatus.waitForClickable({ timeout: 3000 });
     this.maritalStatus.click();
 
     this.dependantsDdl.click();
     this.dependants.moveTo();
+    this.dependants.waitForClickable({ timeout: 3000 });
     this.dependants.click();
 
     this.baseNetIncomeAmount.setValue(data.base_net_income_amount);
