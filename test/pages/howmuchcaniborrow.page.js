@@ -15,7 +15,7 @@ class HowMuchCanIBorrowPage extends Page {
   }
 
   get dependants() {
-    return $("//form[@id='pre-approval-how-much-can-i-borrow-form']/div[3]//span[contains(text(),'" + data.dependantsNum + "')]");
+    return $("//form[@id='pre-approval-how-much-can-i-borrow-form']/div[3]//div[@class='select-wrapper']//span[contains(text(),'" + data.dependantsNum + "')]");
   }
 
   get baseNetIncomeAmount() {
@@ -106,10 +106,14 @@ class HowMuchCanIBorrowPage extends Page {
   addHouseHoldDetails() {
 
     this.maritalStatusDdl.click();
+    this.maritalStatus.moveTo();
+    this.maritalStatus.waitForClickable({ timeout: 3000 });
     this.maritalStatus.click();
 
     this.dependantsDdl.click();
-    this.dependants.doubleClick();
+    this.dependants.moveTo();
+    this.dependants.waitForClickable({ timeout: 3000 });
+    this.dependants.click();
 
     this.baseNetIncomeAmount.setValue(data.base_net_income_amount);
     this.baseNetIncomeFrequencyDdl.click();
