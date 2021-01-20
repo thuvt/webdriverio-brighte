@@ -24,6 +24,10 @@
 
 ```npm test```
 
+**Tip**
+If you get error about Chrome driver version: 
+```npm install chromedriver --chromedriver_version=LATEST```
+
 **Allure Report**
 (you must have installed [allure command line](https://docs.qameta.io/allure/#_get_started))
 
